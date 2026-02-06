@@ -11,12 +11,13 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
-    roll_no TEXT,
+    roll_no TEXT UNIQUE,
     age INTEGER,
     course TEXT
 )
 """)
 conn.commit()
+
 
 # ------------------ Sidebar Menu ------------------
 st.sidebar.title("📚 Student Management")
